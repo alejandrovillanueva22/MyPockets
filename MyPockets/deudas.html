@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPockets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo-container">
+        <img src="logo2.png" alt="Logo" class="logo">
+        <h1>MyPockets</h1>
+    </div>    
+</header>
+
+
+    <div class="contenedor">
+
+
+        <aside class="menu-lateral">
+            <nav>
+                <ul>
+                    <li><a href=index.html>🏠  Inicio</a></li>
+                    <li><a href=balance.html>💰  Balance General</a></li>
+                    <li><a href=metas.html>🎯  Metas financieras</a></li>
+                    <li><a href=deudas.html>💸  Deudas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="contenido">
+            <h1>Deudas</h1>
+            <section class="deudas">
+                <div class="grid-metas">
+
+                    <div class="deudas" data-id="1">
+                        <h2>Deuda 1</h2>
+                        <p class="ingresos">$0</p>
+                    </div>
+                    
+                    <div class="deudas" data-id="2">
+                        <h2>Deuda 2</h2>
+                        <p class="egresos">$0</p>
+                    </div>
+
+                    <div class="deudas" data-id="3">
+                        <h2>Deuda 3</h2>
+                        <p class="disponible">$0</p>
+                    </div>
+
+                    <div class="deudas" data-id="4">
+                        <h2>Deuda 4</h2>
+                        <p class="ahorros">$0</p>
+                    </div>
+
+                    <div class="deudas" data-id="5">
+                        <h2>Deuda 5</h2>
+                        <p class="deuda">$0</p>
+                    </div>
+
+                    <div class="deudas" data-id="6">
+                        <h2>Deuda 6</h2>
+                        <p class="proyeccion">$0</p>
+                    </div>
+                                        
+                </div>
+                 <button id="registrar" class="btn-registrar">💸 Registrar deuda</button>
+            
+            </section>
+        </main>
+
+    </div>
+
+
+    <footer>
+        <p>&copy;2025 Alejandro Villanueva. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="modalRegistro" class="modal" style="display: none;">
+        <div class="modal-contenido">
+        <h1>Registrar transacción</h1>
+        <span class="cerrar-modal" id="cerrarModal">&times;</span>
+        <form id="formRegistro">
+            <div class="form-group">
+                <label for="tipo">Tipo:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">Selecciona un tipo:</option>
+                    <option value="ingreso">Ingreso</option>
+                    <option value="egreso">Egreso</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="concepto">Concepto:</label>
+                <select id="concepto" name="concepto" required>
+                    <option value="">Selecciona el concepto:</option>
+                    <option value="ahorro">Ahorro</option>
+                    <option value="articulos">Articulos personales (Ropa/Calzado/Cuidado personal)</option>
+                    <option value="comida">Comida rápida</option>
+                    <option value="despensa">Despensa</option> 
+                    <option value="educacion">Educación</option>
+                    <option value="otros">Gasto innecesario</option>
+                    <option value="herramienta">Herramienta de trabajo</option>
+                    <option value="mantenimiento">Mantenimiento (Hogar/Transporte/Dispositivos)</option> 
+                    <option value="mascota">Mascotas</option>
+                    <option value="ocio">Ocio</option>
+                    <option value="otrosIngresos">Otros ingresos</option> 
+                    <option value="salud">Salud</option>
+                    <option value="servicios">Servicios</option>
+                    <option value="sueldo">Sueldo</option>
+                    <option value="suscripciones">Suscripciones</option>
+                    <option value="tec">Técnologia</option>
+                    <option value="transporte">Transporte</option>
+
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="monto">Monto:</label>
+                <input type="number" id="monto" name="monto" step="0.01" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripciones" name="descripciones">
+            </div>
+
+            <button type="submit" class="btn-registrarTransaccion">Registrar</button>
+        </form>
+        <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+            <h2>¡Transacción registrada!</h2>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
